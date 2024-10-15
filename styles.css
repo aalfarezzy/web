@@ -9,6 +9,16 @@ body {
   background-color: #f4f4f4;
 }
 
+.logo-sekolah {
+  width: 95px;
+  height: 95px;
+}
+
+.logo-penggerak {
+  width: 150px;
+  height: 80px;
+}
+
 nav {
   background-color: #0093ce;
   justify-content: space-between;
