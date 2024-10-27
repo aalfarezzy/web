@@ -5,18 +5,17 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #f4f4f4;
+@font-face {
+  font-family: "superkids";
+  src: url(Super\ Kinds.ttf);
 }
 
-.logo-sekolah {
-  width: 95px;
-  height: 95px;
-}
-
-.logo-penggerak {
-  width: 150px;
-  height: 80px;
+.logo {
+  font-family: "superkids";
+  font-size: 32px;
+  color: #eef2e2;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 nav {
@@ -50,12 +49,43 @@ nav ul li a:hover {
   border-bottom: 1px solid #ffda33;
 }
 
+.menu-icon {
+  font-size: 28px;
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li:last-of-type {
+    padding-bottom: 8px;
+  }
+
+  nav ul.hidden {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .scroll-container {
   justify-content: center;
   display: flex;
   align-items: center;
   position: relative;
-  top: 90px;
+  padding: 50px;
   gap: 2rem;
 }
 
@@ -63,7 +93,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 200px;
+  max-width: 270px;
   width: 100%;
   background: #fff;
   border-radius: 24px;
@@ -119,4 +149,55 @@ nav ul li a:hover {
 .text-data .job {
   font-size: 15px;
   font-weight: 400;
+  align-content: center;
+  padding-top: 2px;
+}
+.text-data .jobdesk {
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.heading {
+  padding: 80px 0px 1rem 3cm;
+}
+
+.container {
+  padding: 200px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0093ce;
+  border-bottom: 3px solid #0093ce;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.content.p {
+  font-size: 25px;
+  color: #000000;
+  line-height: 1.6;
+  word-spacing: 3px;
+}
+
+main {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+main > section {
+  height: 100vh;
+  background: #fff;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+main > #section-2 .head {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  padding-top: 80px;
 }
